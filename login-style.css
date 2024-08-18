@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+section{
+    height: 100vh;
+    background-image: url("./lock.jpg");
+    object-fit: contain;
+}
+form{
+    width: 370px;
+    height: 250px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    float: right;
+    margin:180px 70px 0 0 ;
+}
+form h1{
+    text-align: center;
+}
+.child{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 5px 0;
+}
+input{
+    height: 20px;
+    padding: 5px;
+}
+.bto{
+    margin: 20px 0;
+    width: 80px;
+    height: 30px;
+    cursor: pointer;
+    background-color: #179BAE;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}

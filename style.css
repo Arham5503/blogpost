@@ -1,0 +1,27 @@
+
+section {
+    width: 90%;
+    margin: 10px auto;
+}
+
+.post {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 70vh;
+    padding: 20px;
+}
+
+label {
+    font-size: 20px;
+}
+
+input {
+    height: 20px;
+    padding: 5px;
+}
+
+textarea {
+    padding: 10px;
+}
