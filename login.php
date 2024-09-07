@@ -11,7 +11,7 @@ if (isset($_POST['submit'])) {
     if ($result->rowCount() == 1) {
         $_SESSION['mail'] = $mail;
         $_SESSION['pass'] = $pass;
-        header("Location: index.php");
+        header("Location: add.php");
         exit();
     }
     else {

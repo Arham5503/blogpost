@@ -1,11 +1,15 @@
-
+body{
+    background-color: #F1F1F1;
+}
 section {
     width: 90%;
-    margin: 10px auto;
+    margin: 20px auto;
 }
 
 .post {
-    border: 1px solid black;
+    margin:10px 0;
+    background: white;
+    border-radius: 10px ;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -24,4 +28,19 @@ input {
 
 textarea {
     padding: 10px;
+    resize: none;
+}
+.btns {
+    float: right;
+    border: none;
+    width: 70px;
+    height: 30px;
+    background-color: rgb(23, 155, 174);
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+#count_message {
+    background-color: smoke;
+    margin-right: 5px;
 }

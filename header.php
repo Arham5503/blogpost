@@ -13,7 +13,7 @@
         <nav>
             <ul>
                 <li>
-                    <a href="index.php">New Post</a>
+                    <a href="add.php">New Post</a>
                 </li>
                 <li>
                     <a href="read.php">View All</a>

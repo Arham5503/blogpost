@@ -76,9 +76,15 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
                         <label for="">Tittel</label>
                         <input type="text" name="title" id="" value="<?php echo $row["title"] ?>" required>
                         <label for="">Body of Post</label>
-                        <textarea name="article" rows="15" id="" required><?php echo $row["article"] ?></textarea>
+                        <textarea style="padding: 10px; resize: none;" class="form-control" id="text" name="article"
+                            maxlength="3000" placeholder="Type in your message"
+                            rows="8"><?php echo $row["article"] ?></textarea>
+                        <span>
+                            <caption>Character Limit:</caption>
+                            <span class="" id="count_message"></span>
+                        </span>
+                        <br>
                         <div>
-                            <caption>2000 chracters limit:</caption>
                             <button class="btns">Update</button>
                         </div>
                     </div>
@@ -89,6 +95,17 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
 ?>
         </section>
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        var text_max = 3000;
+        $('#count_message').html('0 / ' + text_max);
+
+        $('#text').keyup(function () {
+            var text_length = $('#text').val().length;
+            var text_remaining = text_max - text_length;
+            $('#count_message').html(text_length + ' / ' + text_max);
+        });
+    </script>
 </body>
 
 </html>

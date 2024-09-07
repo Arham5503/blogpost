@@ -53,9 +53,23 @@ include 'header.php';
             color: white;
             cursor: pointer;
         }
-        .btns a{
+
+        .btns a {
             text-decoration: none;
             color: white;
+        }
+
+        img {
+            width: 500px
+        }
+
+        span {
+            border-radius: 6px;
+            width:75px;
+            padding: 3px;
+            color: white;
+            margin: 5px 0;
+            background-color: rgb(23, 155, 174);
         }
     </style>
 </head>
@@ -72,22 +86,27 @@ include 'header.php';
                 while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
                     echo "<div class='child'>";
                     echo "<h1>" . $row['title'] . "</h1>";
+                    echo "<span>" . $row['date'] . "</span>";
+                    if (!empty($row['image'])) {
+                        echo "<img src='uploaded-images/" . $row['image'] . "'>";
+                    }
                     echo "<p>" . $row['article'] . "</p>";
                     ?>
                     <div class="scndChild">
-                        <button class="btns" onclick="return del()"><a href="delete-inline.php?title=<?php echo $row["title"]?>">Delete</a></button>
-                        <button class="btns"><a href="edit.php?title=<?php echo $row["title"]?>">Edit</a></button>
+                        <button class="btns" onclick="return del()"><a
+                                href="delete-inline.php?SR_NO=<?php echo $row['SR_NO'] ?>">Delete</a></button>
+                        <button class="btns"><a href="edit.php?title=<?php echo $row['title'] ?>">Edit</a></button>
                     </div>
                     </div>
                     <?php
                 }
-                $con = null;
+                $conn = null;
                 ?>
             </form>
         </section>
     </main>
     <script>
-        function del(){
+        function del() {
             return confirm("Are You Sure??");
         }
     </script>
